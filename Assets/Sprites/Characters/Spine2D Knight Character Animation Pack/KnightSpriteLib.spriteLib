@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 36
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Red Flappy
+      m_Hash: -2016586160
+      m_Sprite: {fileID: -2756081072618206453, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2756081072618206453, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Saiyan
+      m_Hash: 1416132840
+      m_Sprite: {fileID: -7047971905120868581, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7047971905120868581, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Body
+    m_Hash: 2073732236
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Armor
+      m_Hash: 2129056248
+      m_Sprite: {fileID: 9050464262916775278, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9050464262916775278, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Cloth
+      m_Hash: -483375942
+      m_Sprite: {fileID: 1765019986916052535, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1765019986916052535, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: RShoulder
+    m_Hash: -1990001284
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Armor
+      m_Hash: 2129056248
+      m_Sprite: {fileID: 4591347634391874896, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4591347634391874896, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Cloth
+      m_Hash: -483375942
+      m_Sprite: {fileID: 7805146176977469534, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7805146176977469534, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: LShoulder
+    m_Hash: -312449889
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Armor
+      m_Hash: 2129056248
+      m_Sprite: {fileID: 1365722728006684939, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1365722728006684939, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Cloth
+      m_Hash: -483375942
+      m_Sprite: {fileID: -1109038245776774176, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1109038245776774176, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: RGlove
+    m_Hash: 1821442823
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Tan
+      m_Hash: 1108888007
+      m_Sprite: {fileID: -6994919612454160241, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6994919612454160241, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Boxing
+      m_Hash: 689250390
+      m_Sprite: {fileID: 815187011000530492, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 815187011000530492, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: LGlove
+    m_Hash: 1431134444
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Tan
+      m_Hash: 1108888007
+      m_Sprite: {fileID: 8045849557541067722, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8045849557541067722, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Boxing
+      m_Hash: 689250390
+      m_Sprite: {fileID: 4663897247039887496, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4663897247039887496, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: RThigh
+    m_Hash: -313107939
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Entry
+      m_Hash: -354373004
+      m_Sprite: {fileID: 4636154466320682388, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4636154466320682388, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: LThigh
+    m_Hash: -729138698
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: BlueLeg
+      m_Hash: -1093139652
+      m_Sprite: {fileID: -337538096993123615, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -337538096993123615, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: RCalf
+    m_Hash: 702340532
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Entry
+      m_Hash: -354373004
+      m_Sprite: {fileID: 2744214264925199812, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2744214264925199812, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: LCalf
+    m_Hash: -166923177
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: ArmorKnee
+      m_Hash: 2051704097
+      m_Sprite: {fileID: -2705417495156986978, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2705417495156986978, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: RFoot
+    m_Hash: -871882233
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: ArmorFoot
+      m_Hash: 431882163
+      m_Sprite: {fileID: 7679216636488438318, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7679216636488438318, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: LFoot
+    m_Hash: 332925924
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Entry
+      m_Hash: -354373004
+      m_Sprite: {fileID: -258354099060724728, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -258354099060724728, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: RToe
+    m_Hash: -196576026
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: ArmorToe
+      m_Hash: 567553220
+      m_Sprite: {fileID: 7552662209239337315, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7552662209239337315, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: LToe
+    m_Hash: 1150180426
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Entry
+      m_Hash: -354373004
+      m_Sprite: {fileID: -1828986650097748563, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1828986650097748563, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  m_PrimaryLibraryGUID: 

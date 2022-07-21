@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dragLerp = 0.03f;
 
     [SerializeField] float speed = 1;
+
+    // the graphic we'll flip when we change direction. We don't want collision to get affected by that
+    [SerializeField] Transform graphicToFlip;
+    // how long we spend tweening the x scale when we flip direction
+    [SerializeField] float xFlipTweenTime = 0.3f;
 
     void Awake()
     {
@@ -55,13 +61,13 @@ public class PlayerController : MonoBehaviour
     {
         // flipX doesn't work with the animations, we're going to use scaling instead
 
-        if (_velocity.x < -0.01)
+        if (_velocity.x < -0.01 && graphicToFlip.localScale.x == 1)
         {
-            transform.localScale = new Vector2(-1,1);
+            graphicToFlip.DOScaleX(-1, xFlipTweenTime);
         }
-        else if (_velocity.x > 0.01)
+        else if (_velocity.x > 0.01 && graphicToFlip.localScale.x == -1)
         {
-            transform.localScale = Vector2.one;
+            graphicToFlip.DOScaleX(1, xFlipTweenTime);
         }
     }
 

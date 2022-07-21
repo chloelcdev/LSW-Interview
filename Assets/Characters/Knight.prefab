@@ -228,7 +228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _notificationText: {fileID: 0}
+  _notificationTextCanvasGroup: {fileID: 0}
   closestInteractable: {fileID: 0}
+  messageFadeTime: 0.3
 --- !u!1 &332402410142601819
 GameObject:
   m_ObjectHideFlags: 0

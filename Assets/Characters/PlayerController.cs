@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement(movementInput);
         ApplyDirection(movementInput);
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.E))
             DoInteract();
     }
 

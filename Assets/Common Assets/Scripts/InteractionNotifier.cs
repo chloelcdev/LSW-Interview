@@ -7,6 +7,7 @@ using DG.Tweening;
 public class InteractionNotifier : MonoBehaviour
 {
     [SerializeField] TMP_Text _notificationText;
+    [SerializeField] CanvasGroup _notificationTextCanvasGroup;
     string startingTextFormat;
 
     List<Interactable> nearbyInteractables = new List<Interactable>();
@@ -18,7 +19,10 @@ public class InteractionNotifier : MonoBehaviour
     private void Awake()
     {
         startingTextFormat = _notificationText.text;
+
         _notificationText.text = "";
+        _notificationTextCanvasGroup.alpha = 0;
+        _notificationTextCanvasGroup.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -108,16 +112,16 @@ public class InteractionNotifier : MonoBehaviour
 
         if (enabled)
         {
-            _notificationText.DOKill();
-            _notificationText.gameObject.SetActive(true);
-            _notificationText.DOFade(1, messageFadeTime).onComplete = () => { };
+            _notificationTextCanvasGroup.DOKill();
+            _notificationTextCanvasGroup.gameObject.SetActive(true);
+            _notificationTextCanvasGroup.DOFade(1, messageFadeTime).onComplete = () => { };
         }
         else if (!enabled)
         {
-            _notificationText.DOKill();
-            _notificationText.DOFade(0, messageFadeTime).onComplete = () => 
+            _notificationTextCanvasGroup.DOKill();
+            _notificationTextCanvasGroup.DOFade(0, messageFadeTime).onComplete = () => 
             {
-                _notificationText.gameObject.SetActive(false);
+                _notificationTextCanvasGroup.gameObject.SetActive(false);
             };
         }
     }

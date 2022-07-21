@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 36
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Entry
+      m_Hash: -354373004
+      m_Sprite: {fileID: -2756081072618206453, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2756081072618206453, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Entry_0
+      m_Hash: 874506106
+      m_Sprite: {fileID: -7047971905120868581, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7047971905120868581, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Body
+    m_Hash: 2073732236
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Entry
+      m_Hash: -354373004
+      m_Sprite: {fileID: 9050464262916775278, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9050464262916775278, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+    - m_Name: Entry_0
+      m_Hash: 874506106
+      m_Sprite: {fileID: 1765019986916052535, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1765019986916052535, guid: 28788130087573e428c1064bd9c69548, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: RShoulder
+    m_Hash: -1990001284
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: LShoulder
+    m_Hash: -312449889
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: New Category 4
+    m_Hash: 1908389018
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: RGlove
+    m_Hash: 1821442823
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: LGlove
+    m_Hash: 1431134444
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: Sword
+    m_Hash: 1529145355
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: Shield
+    m_Hash: 423614430
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  m_PrimaryLibraryGUID: 

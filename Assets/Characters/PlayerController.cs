@@ -48,6 +48,21 @@ public class PlayerController : MonoBehaviour
 
         ApplyDrag();
         ApplyVelocity();
+        ApplyDirection();
+    }
+
+    void ApplyDirection()
+    {
+        // flipX doesn't work with the animations, we're going to use scaling instead
+
+        if (_velocity.x < -0.01)
+        {
+            transform.localScale = new Vector2(-1,1);
+        }
+        else if (_velocity.x > 0.01)
+        {
+            transform.localScale = Vector2.one;
+        }
     }
 
     void ApplyDrag()

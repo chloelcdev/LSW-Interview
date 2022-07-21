@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementInput = new Vector2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") );
         HandleMovement(movementInput);
+        ApplyDirection(movementInput);
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
             DoInteract();
@@ -54,18 +55,17 @@ public class PlayerController : MonoBehaviour
 
         ApplyDrag();
         ApplyVelocity();
-        ApplyDirection();
     }
 
-    void ApplyDirection()
+    void ApplyDirection(Vector2 input)
     {
         // flipX doesn't work with the animations, we're going to use scaling instead
 
-        if (_velocity.x < -0.01 && graphicToFlip.localScale.x == 1)
+        if (input.x < -0.01 && graphicToFlip.localScale.x == 1)
         {
             graphicToFlip.DOScaleX(-1, xFlipTweenTime);
         }
-        else if (_velocity.x > 0.01 && graphicToFlip.localScale.x == -1)
+        else if (input.x > 0.01 && graphicToFlip.localScale.x == -1)
         {
             graphicToFlip.DOScaleX(1, xFlipTweenTime);
         }

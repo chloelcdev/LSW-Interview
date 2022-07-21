@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     Animator _animator;
     Rigidbody2D _rb;
 
+    [SerializeField] InteractionNotifier _interactionNotifier;
+
     Vector2 _velocity;
 
     [SerializeField] float dragLerp = 0.03f;
@@ -84,7 +86,11 @@ public class PlayerController : MonoBehaviour
 
     void DoInteract()
     {
-        _animator.SetTrigger("Interact");
+        if (_interactionNotifier.closestInteractable != null)
+        {
+            _interactionNotifier.closestInteractable.OnInteraction?.Invoke();
+            _animator.SetTrigger("Interact");
+        }
     }
 
     void SetAnimationState(PlayerAnimState state)

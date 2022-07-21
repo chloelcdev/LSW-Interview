@@ -5,11 +5,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
-    Animator animator;
+    Animator _animator;
+    Rigidbody2D _rb;
+
+    Vector2 _velocity;
+
+    [SerializeField] float dragLerp = 0.03f;
+
+    [SerializeField] float speed = 1;
 
     void Awake()
     {
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -31,21 +39,37 @@ public class PlayerController : MonoBehaviour
         if (input.magnitude == 0)
         {
             SetAnimationState(PlayerAnimState.Idle);
-            return;
+        }
+        else
+        {
+            _velocity += input * speed * Time.deltaTime;
+            SetAnimationState(PlayerAnimState.Walking);
         }
 
-        SetAnimationState(PlayerAnimState.Walking);
+        ApplyDrag();
+        ApplyVelocity();
+    }
+
+    void ApplyDrag()
+    {
+        _velocity = Vector2.Lerp(_velocity, Vector2.zero, dragLerp);
+    }
+
+    void ApplyVelocity()
+    {
+        // we're using moveposition because we don't want the physics engine doing much with our character.
+        _rb.MovePosition(_rb.position + _velocity);
     }
 
     void DoInteract()
     {
-        animator.SetTrigger("Interact");
+        _animator.SetTrigger("Interact");
     }
 
     void SetAnimationState(PlayerAnimState state)
     {
         _currentAnimationState = state;
-        animator.SetInteger("AnimationState", (int)_currentAnimationState);
+        _animator.SetInteger("AnimationState", (int)_currentAnimationState);
     }
 }
 

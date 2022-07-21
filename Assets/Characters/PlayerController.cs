@@ -14,14 +14,32 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-            SetAnimationState(PlayerAnimState.Idle);
+        HandleInput();
+    }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            SetAnimationState(PlayerAnimState.Walking);
+    void HandleInput()
+    {
+        Vector2 movementInput = new Vector2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") );
+        HandleMovement(movementInput);
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
-            animator.SetTrigger("Interact");
+            DoInteract();
+    }
+
+    void HandleMovement(Vector2 input)
+    {
+        if (input.magnitude == 0)
+        {
+            SetAnimationState(PlayerAnimState.Idle);
+            return;
+        }
+
+        SetAnimationState(PlayerAnimState.Walking);
+    }
+
+    void DoInteract()
+    {
+        animator.SetTrigger("Interact");
     }
 
     void SetAnimationState(PlayerAnimState state)

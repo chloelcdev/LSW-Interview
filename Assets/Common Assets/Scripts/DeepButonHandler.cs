@@ -17,7 +17,18 @@ public class DeepButonHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     [SerializeField] Color LabelColor = Color.white;
     [SerializeField] float LabelFontSize = 28;
 
+    private void Awake()
+    {
+        button = GetComponent<Button>();
+        UpdateDeepButtonLabels();
+    }
+
     private void OnValidate()
+    {
+        UpdateDeepButtonLabels();
+    }
+
+    void UpdateDeepButtonLabels()
     {
         nonPressedLabel.text = Label;
         pressedLabel.text = Label;
@@ -29,9 +40,10 @@ public class DeepButonHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         pressedLabel.color = LabelColor;
     }
 
-    private void Awake()
+    public void SetText(string text)
     {
-        button = GetComponent<Button>();
+        Label = text;
+        UpdateDeepButtonLabels();
     }
 
     public void OnPointerDown(PointerEventData eventData)

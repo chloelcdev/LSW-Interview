@@ -10,6 +10,8 @@ public class ParchmentController : MonoBehaviour
     static ParchmentController _mainInstance;
     public static bool isOpen = false;
 
+    AudioSource _typingSFX;
+
     CanvasGroup _canvasGroup;
     [SerializeField] float fadeTime = 0.4f;
 
@@ -24,9 +26,12 @@ public class ParchmentController : MonoBehaviour
     private void Awake()
     {
         _mainInstance = this;
+
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
         _message.text = "";
+
+        _typingSFX = GetComponent<AudioSource>();
     }
 
     void CloseParchment()
@@ -69,6 +74,8 @@ public class ParchmentController : MonoBehaviour
     {
         skipTypeWriter = false;
 
+        _typingSFX.Play();
+
         // run the typewriter effect
         int characterIndex = 0;
         while (characterIndex < message.Length - 1)
@@ -89,6 +96,8 @@ public class ParchmentController : MonoBehaviour
             float maxDelay = characterTypeDelayMinMax.y;
             yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
         }
+
+        _typingSFX.Stop();
 
         _message.text = message;
 

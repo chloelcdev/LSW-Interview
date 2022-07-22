@@ -24,6 +24,6 @@ public class ChestController : MonoBehaviour
     void GiveReward(int _amount)
     {
         Debug.Log(PlayerController.localPlayer);
-        PlayerController.localPlayer.AddMoney(_amount);
+        PlayerController.localPlayer.AddGold(_amount);
     }
 }

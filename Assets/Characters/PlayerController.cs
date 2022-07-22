@@ -113,9 +113,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void AddMoney(int _amount)
+    public void AddGold(int _amount)
     {
-        inventory.money += _amount;
+        inventory.gold += _amount;
+    }
+
+    public int GetGold()
+    {
+        return inventory.gold;
     }
 }
 

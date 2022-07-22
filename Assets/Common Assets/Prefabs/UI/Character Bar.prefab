@@ -600,6 +600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4805318269835629834}
+  - component: {fileID: 605616786737039216}
   m_Layer: 5
   m_Name: Character Bar
   m_TagString: Untagged
@@ -632,6 +633,19 @@ RectTransform:
   m_AnchoredPosition: {x: 8, y: -4}
   m_SizeDelta: {x: 455.4108, y: 198.07721}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &605616786737039216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563897917603926795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551e7c9c33fc984eb4217848e0a0148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldAmount: {fileID: 2143594521907774490}
 --- !u!1 &7597493060772352545
 GameObject:
   m_ObjectHideFlags: 0

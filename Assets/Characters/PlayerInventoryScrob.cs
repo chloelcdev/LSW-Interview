@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class PlayerInventoryScrob : ScriptableObject
 {
-    public int money = 0;
+    public int gold = 0;
     
     // put a list of clothing items we own here later
 }

@@ -61,17 +61,8 @@ public class InteractionNotifier : MonoBehaviour
         }
     }
 
-    void UpdateClosestInteractable()
+    public void UpdateClosestInteractable()
     {
-        // if there are no nearby interactables, take the message away
-
-        if (nearbyInteractables.Count == 0)
-        {
-            closestInteractable = null;
-            SetMessage("");
-            return;
-        }
-
         // find the closest interactable
 
         float closestDistance = 0;
@@ -79,6 +70,8 @@ public class InteractionNotifier : MonoBehaviour
 
         foreach (var interactable in nearbyInteractables)
         {
+            if (!interactable.IsInteractable) continue;
+
             float distance = Vector3.Distance(interactable.transform.position, transform.position);
             if (distance < closestDistance || closestInteractableFound == null)
             {
@@ -89,13 +82,12 @@ public class InteractionNotifier : MonoBehaviour
         }
 
         // if the closest interactable changed, update which one is closest and set its message
+        if (closestInteractableFound == null)
+            SetMessage("");
+        else if (closestInteractable != closestInteractableFound)
+            SetMessage(closestInteractableFound.message);
 
-        if (closestInteractable != closestInteractableFound)
-        {
-            closestInteractable = closestInteractableFound;
-
-            SetMessage(closestInteractable.message);
-        }
+        closestInteractable = closestInteractableFound;
     }
 
     void SetMessage(string text)

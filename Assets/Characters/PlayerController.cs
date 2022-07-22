@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     Animator _animator;
     Rigidbody2D _rb;
 
-    [SerializeField] InteractionNotifier _interactionNotifier;
+    public InteractionNotifier _interactionNotifier;
 
     Vector2 _velocity;
 

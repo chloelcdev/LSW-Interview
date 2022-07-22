@@ -6,20 +6,24 @@ public class ChestController : MonoBehaviour
 {
     [SerializeField] int _rewardAmount = 1;
     Animator _animator;
+    Interactable _interactable;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _interactable = GetComponent<Interactable>();
     }
     
     public void OnInteract()
     {
         GiveReward(_rewardAmount);
         _animator.SetTrigger("Open");
+        _interactable.IsInteractable = false;
     }
 
     void GiveReward(int _amount)
     {
+        Debug.Log(PlayerController.localPlayer);
         PlayerController.localPlayer.AddMoney(_amount);
     }
 }

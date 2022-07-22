@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        localPlayer = this;
+
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
     }

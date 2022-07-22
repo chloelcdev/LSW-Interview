@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController localPlayer;
 
-    public PlayerInventoryScrob inventory;
+    [SerializeField] PlayerInventoryScrob inventory;
 
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
     Animator _animator;
@@ -109,6 +109,11 @@ public class PlayerController : MonoBehaviour
             _currentAnimationState = state;
             _animator.SetInteger("AnimationState", (int)_currentAnimationState);
         }
+    }
+
+    public void AddMoney(int _amount)
+    {
+        inventory.money += _amount;
     }
 }
 

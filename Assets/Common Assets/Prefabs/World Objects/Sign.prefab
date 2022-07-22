@@ -58,6 +58,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8621840045040461207}
   - component: {fileID: 7391298569369147432}
+  - component: {fileID: 2067056186}
+  - component: {fileID: 2067056187}
+  - component: {fileID: 2067056188}
   m_Layer: 0
   m_Name: Sign
   m_TagString: Untagged
@@ -133,3 +136,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2067056186
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310495691628266179}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &2067056187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310495691628266179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d066c00a2c3a97438432994b05e7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sign
+  message: This sign is hard to make out. I think it just says "West", seems a bit
+    pointless...
+  onMessageClose:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2067056188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310495691628266179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79a9373ba44db6429b896be48d3710c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2067056187}
+        m_TargetAssemblyTypeName: GenericParchmentOpener, Assembly-CSharp
+        m_MethodName: OpenParchment
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  message: Read

@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 4045075494178515048}
   - component: {fileID: 921431377}
   - component: {fileID: 921431378}
+  - component: {fileID: 921431380}
   m_Layer: 0
   m_Name: GiantColumn
   m_TagString: Untagged
@@ -211,8 +212,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteraction:
     m_PersistentCalls:
-      m_Calls: []
-  message: Read
+      m_Calls:
+      - m_Target: {fileID: 921431380}
+        m_TargetAssemblyTypeName: GenericParchmentOpener, Assembly-CSharp
+        m_MethodName: OpenParchment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  message: Interact
+--- !u!114 &921431380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011591242921778696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d066c00a2c3a97438432994b05e7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Giant Column
+  message: Oh how convenient... This giant block is just here for no reason blocking
+    my path cause some developer doesn't want me to go this way.
+  onMessageClose:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GenericParchmentOpener, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1860404368337042116
 GameObject:
   m_ObjectHideFlags: 0

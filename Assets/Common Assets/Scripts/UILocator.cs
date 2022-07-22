@@ -8,7 +8,7 @@ public class UILocator : MonoBehaviour
 
     public List<RectTransformStringPair> UIElements;
 
-    public Dictionary<string, RectTransform> UIDictionary;
+    public Dictionary<string, RectTransform> UIDictionary = new Dictionary<string, RectTransform>();
 
     private void Awake()
     {

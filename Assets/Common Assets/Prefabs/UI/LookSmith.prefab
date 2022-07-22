@@ -768,10 +768,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6317028916247265926}
     m_Modifications:
-    - target: {fileID: 319375171244224709, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0010986328
-      objectReference: {fileID: 0}
     - target: {fileID: 2431158183516098108, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
       propertyPath: m_Name
       value: Player Inventory
@@ -859,10 +855,6 @@ PrefabInstance:
     - target: {fileID: 3671347621745200411, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496527604775895231, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}

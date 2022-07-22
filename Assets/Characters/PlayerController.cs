@@ -35,6 +35,12 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
+        if (ParchmentController.isOpen)
+        {
+            SetAnimationState(PlayerAnimState.Idle);
+            return;
+        }
+
         Vector2 movementInput = new Vector2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") );
         HandleMovement(movementInput);
         ApplyDirection(movementInput);
@@ -95,8 +101,11 @@ public class PlayerController : MonoBehaviour
 
     void SetAnimationState(PlayerAnimState state)
     {
-        _currentAnimationState = state;
-        _animator.SetInteger("AnimationState", (int)_currentAnimationState);
+        if (state != _currentAnimationState)
+        {
+            _currentAnimationState = state;
+            _animator.SetInteger("AnimationState", (int)_currentAnimationState);
+        }
     }
 }
 

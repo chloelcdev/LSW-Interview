@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIElements:
-  - name: Dragzone
+  - name: dragzone
     rectTranform: {fileID: 5491823637277580934}
 --- !u!1 &5982021320597911504
 GameObject:

@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleInput();
+        ApplyDrag();
+        ApplyVelocity();
     }
 
     void HandleInput()
@@ -60,9 +62,6 @@ public class PlayerController : MonoBehaviour
             _velocity += input * speed * Time.deltaTime;
             SetAnimationState(PlayerAnimState.Walking);
         }
-
-        ApplyDrag();
-        ApplyVelocity();
     }
 
     void ApplyDirection(Vector2 input)

@@ -876,6 +876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deeaf2a97d3a3fb4580a6b8541311dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoBar: {fileID: 0}
+  headSprite: {fileID: 7409361535958785300}
   inventory: {fileID: 11400000, guid: 2e257ca706a6f7b4eba8abab97ab24c1, type: 2}
   _interactionNotifier: {fileID: 1379102815}
   dragLerp: 0.12
@@ -2703,6 +2705,11 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: -32611930
+--- !u!212 &7409361535958785300 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1609719090194301641, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
+  m_PrefabInstance: {fileID: 8108038387974692829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7469888483895780867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}

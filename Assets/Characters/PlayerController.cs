@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController localPlayer;
 
+    [SerializeField] CharacterBarController infoBar;
+
+    [SerializeField] SpriteRenderer headSprite;
+
     [SerializeField] PlayerInventoryScrob inventory;
 
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
@@ -34,11 +38,26 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        UpdateInfo();
+    }
+
     void Update()
     {
         HandleInput();
         ApplyDrag();
         ApplyVelocity();
+    }
+
+    void UpdateInfo()
+    {
+        infoBar.UpdateInfo();
+    }
+
+    public Sprite GetHeadSprite()
+    {
+        return headSprite.sprite;
     }
 
     void HandleInput()
@@ -116,6 +135,7 @@ public class PlayerController : MonoBehaviour
     public void AddGold(int _amount)
     {
         inventory.gold += _amount;
+        UpdateInfo();
     }
 
     public int GetGold()

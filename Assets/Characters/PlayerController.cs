@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController localPlayer;
 
+    public PlayerInventoryScrob inventory;
+
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
     Animator _animator;
     Rigidbody2D _rb;

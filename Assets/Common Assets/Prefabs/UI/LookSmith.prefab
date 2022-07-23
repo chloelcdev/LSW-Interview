@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6dcca3b0d459a4ba173728b27e70ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
+  canvasGroup: {fileID: 6307363452857949435}
   equipmentDirectory: {fileID: 11400000, guid: 60b5555b7520d2b4bae3653d6b09aa32, type: 2}
   inventoryItemPrefab: {fileID: 4275001267536532438, guid: e2767e45ed5fa6a428fd77dfe2bd861d, type: 3}
   playerInventorySlots:

@@ -23,9 +23,6 @@ public class ConfirmationController : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-
-        canvasGroup.alpha = 0;
-        canvasGroup.blocksRaycasts = false;
     }
 
     public static void Open(string title, string message, string leftButtonText, string rightButtonText, Action onLeftButton, Action onRightButton)

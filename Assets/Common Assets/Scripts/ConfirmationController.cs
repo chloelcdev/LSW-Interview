@@ -107,7 +107,7 @@ public class ConfirmationController : MonoBehaviour
     void Close()
     {
         canvasGroup.blocksRaycasts = false;
-        canvasGroup.DOFade(1, fadeTime);
+        canvasGroup.DOFade(0, fadeTime);
     }
 
 }

@@ -16,9 +16,9 @@ public class BasicBlink : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (_spriteRenderer != null)
-            _spriteRenderer.DOFade(0, 1).SetLoops(-1, LoopType.Yoyo);
+            _spriteRenderer.DOFade(0, FadeTime).SetLoops(-1, LoopType.Yoyo);
         else if (_canvasGroup != null)
-            _spriteRenderer.DOFade(0, 1).SetLoops(-1, LoopType.Yoyo);
+            _spriteRenderer.DOFade(0, FadeTime).SetLoops(-1, LoopType.Yoyo);
         else
             Debug.LogWarning($"BasicBlink exists on object {gameObject.name} but no CanvasGroup or SpriteRenderer is set");
     }

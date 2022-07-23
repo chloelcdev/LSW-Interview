@@ -24,6 +24,6 @@ public class ChestController : MonoBehaviour
     void GiveReward(int _amount)
     {
         PlayerController.localPlayer.AddGold(_amount);
-        GetComponent<AudioSource>().Play();
+        SFXPlayer.PlayCoinSound();
     }
 }

@@ -7,6 +7,7 @@ public class SFXPlayer : MonoBehaviour
     [SerializeField] AudioClip clickClip;
     [SerializeField] AudioClip equipClip;
     [SerializeField] AudioClip purchaseClip;
+    [SerializeField] AudioClip coinGetClip;
 
     [SerializeField] List<AudioSource> audioSources;
 
@@ -26,15 +27,6 @@ public class SFXPlayer : MonoBehaviour
         }
 
         Invoke("PurgeLoop", purgeFrequency);
-    }
-
-    private void Update()
-    {
-        //test
-        if (Input.GetKeyDown(KeyCode.Q))
-            PlayEquipSound(); 
-        if (Input.GetKey(KeyCode.Z))
-            PlayEquipSound();
     }
 
     void PurgeLoop()
@@ -98,5 +90,10 @@ public class SFXPlayer : MonoBehaviour
     public static void PlayPurchaseSound()
     {
         _instance.PlaySound(_instance.purchaseClip);
+    }
+
+    public static void PlayCoinSound()
+    {
+        _instance.PlaySound(_instance.coinGetClip);
     }
 }

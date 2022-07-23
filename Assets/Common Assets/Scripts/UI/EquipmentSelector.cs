@@ -54,7 +54,7 @@ public class EquipmentSelector : MonoBehaviour
     {
         equipmentImage.sprite = equip.GetFirstSprite();
 
-        Debug.Log(equip.IsEquipped);
+        //Debug.Log(equip.IsEquipped);
         equipButton.SetInteractable(!equip.IsEquipped);
 
         currentSelection = equip;

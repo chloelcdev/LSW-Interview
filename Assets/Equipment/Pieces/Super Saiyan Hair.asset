@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   library: {fileID: 7108339969198208228, guid: 7b2f3634ca1d0854096bd186a8a380b9, type: 3}
   type: 0
-  cost: 3
+  cost: 5
   itemName: Super Saiyan Hair
   IsDefault: 0
   IsOwned: 0

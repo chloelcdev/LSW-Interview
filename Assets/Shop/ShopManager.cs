@@ -93,7 +93,7 @@ public class ShopManager : MonoBehaviour
             () =>
             {
                 item.SetSlot(slotTo);
-                Buy(equipmentData);
+                Sell(equipmentData);
             }
         );
     }

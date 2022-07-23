@@ -83,28 +83,47 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     void Drop()
     {
         dragging = false;
-
-        RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+        RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, Vector2.zero);
 
         if (hit.collider != null)
         {
             var slot = hit.collider.GetComponent<InventorySlot>();
             if (slot != null && slot.currentItem == null)
             {
-                rectTransform.anchoredPosition = slot.rectTransform.anchoredPosition;
-                rectTransform.SetParent(slot.rectTransform);
+                if (currentSlot.isShopInventorySlot == slot.isShopInventorySlot)
+                {
+                    SetSlot(slot);
+                }
+                else if (slot.isShopInventorySlot) {
+                    shop.TrySell(this, equipmentData, slot);
+                }
+                else
+                {
+                    shop.TryBuy(this, equipmentData, slot);
+                }
 
-                currentSlot.currentItem = null;
-                slot.currentItem = this;
-
-                yield break; 
+                return;
             }
         }
 
+        ResetDraggable();
+    }
+
+    public void ResetDraggable()
+    {
         rectTransform.SetParent(previousParent);
         rectTransform.anchoredPosition = Vector2.zero;
+    }
 
-        yield break;
+    public void SetSlot(InventorySlot slot)
+    {
+        rectTransform.SetParent(slot.rectTransform);
+        rectTransform.anchoredPosition = Vector2.zero;
+
+        currentSlot.currentItem = null;
+        slot.currentItem = this;
+
+        currentSlot = slot;
     }
 
     void Update()

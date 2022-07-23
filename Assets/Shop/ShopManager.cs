@@ -42,14 +42,60 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    void Purchase(EquipmentScrob item)
+    void Buy(EquipmentScrob item)
     {
-
+        PlayerController.localPlayer.AddGold(-item.cost);
     }
 
     void Sell(EquipmentScrob item)
     {
+        PlayerController.localPlayer.AddGold(item.cost);
+    }
 
+    public void TryBuy(InventoryItem item, EquipmentScrob equipmentData, InventorySlot slotTo)
+    {
+        if (PlayerController.localPlayer.GetGold() >= equipmentData.cost)
+        {
+            ConfirmationController.Open
+            (
+                "Are you sure?",
+                $"You're about to sell {equipmentData.itemName} for {equipmentData.cost}!",
+                "Cancel", "Buy",
+                item.ResetDraggable,
+                () =>
+                {
+                    item.SetSlot(slotTo);
+                    Buy(equipmentData);
+                }
+            );
+        }
+        else
+        {
+            item.ResetDraggable();
+
+            ConfirmationController.Open
+            (
+                "Nope",
+                $"You need {equipmentData.cost} gold but you only have {PlayerController.localPlayer.GetGold()} gold!",
+                "Okay :(", null
+            );
+        }
+    }
+
+    public void TrySell(InventoryItem item, EquipmentScrob equipmentData, InventorySlot slotTo)
+    {
+        ConfirmationController.Open
+        (
+            "Are you sure?",
+            $"You're about to buy {equipmentData.itemName} for {equipmentData.cost}!",
+            "Cancel", "Sell",
+            item.ResetDraggable,
+            () =>
+            {
+                item.SetSlot(slotTo);
+                Buy(equipmentData);
+            }
+        );
     }
 
 }

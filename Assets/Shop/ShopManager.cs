@@ -23,7 +23,7 @@ public class ShopManager : MonoBehaviour
             AddItem(item, playerInventorySlots);
         }
 
-        foreach (var item in equipmentDirectory.GetPlayerEquipment())
+        foreach (var item in equipmentDirectory.GetShopEquipment())
         {
             AddItem(item, shopInventorySlots);
         }

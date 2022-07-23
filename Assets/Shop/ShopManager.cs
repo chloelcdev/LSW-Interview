@@ -110,7 +110,7 @@ public class ShopManager : MonoBehaviour
         );
     }
 
-    void FadeIn()
+    public void FadeIn()
     {
         canvasGroup.blocksRaycasts = true;
         canvasGroup.DOFade(1, fadeTime);

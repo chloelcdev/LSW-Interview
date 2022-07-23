@@ -36,4 +36,20 @@ public class EquipmentDirectory : ScriptableObject
 
         return equipment;
     }
+
+    public List<EquipmentScrob> GetPlayerEquipment(EquipmentType ofType)
+    {
+        List<EquipmentScrob> equipment = new List<EquipmentScrob>();
+
+        foreach (var item in AllEquipment)
+        {
+            if (item.IsDefault || item.IsOwned)
+            {
+                if (item.type == ofType)
+                    equipment.Add(item);
+            }
+        }
+
+        return equipment;
+    }
 }

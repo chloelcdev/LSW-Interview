@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] SpriteRenderer headSprite;
 
-    [SerializeField] PlayerInventoryScrob inventory;
+    [SerializeField] PlayerStatsAndEquipsScrob inventory;
 
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
     Animator _animator;

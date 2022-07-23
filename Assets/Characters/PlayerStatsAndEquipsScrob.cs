@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class PlayerInventoryScrob : ScriptableObject
+public class PlayerStatsAndEquipsScrob : ScriptableObject
 {
     public int gold = 0;
     

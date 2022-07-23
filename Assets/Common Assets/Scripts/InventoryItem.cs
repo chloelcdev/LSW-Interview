@@ -14,6 +14,9 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     [SerializeField] Image icon;
     [SerializeField] Image overlay;
+
+    [SerializeField] TMPro.TMP_Text goldCostLabel;
+
     RectTransform rectTransform;
 
     InventorySlot currentSlot = null;
@@ -35,6 +38,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         currentSlot = slot;
 
         equipmentData = data;
+        goldCostLabel.text = data.cost.ToString();
         SetIcon(data.GetFirstSprite());
     }
 

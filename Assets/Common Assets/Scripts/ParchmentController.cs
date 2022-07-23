@@ -28,7 +28,7 @@ public class ParchmentController : MonoBehaviour
         _mainInstance = this;
 
         _canvasGroup = GetComponent<CanvasGroup>();
-        _canvasGroup.alpha = 0;
+
         _message.text = "";
 
         _typingSFX = GetComponent<AudioSource>();
@@ -37,6 +37,7 @@ public class ParchmentController : MonoBehaviour
     void CloseParchment()
     {
         isOpen = false;
+        _canvasGroup.blocksRaycasts = false;
         _canvasGroup.DOKill();
         _canvasGroup.DOFade(0, fadeTime);
     }
@@ -53,6 +54,8 @@ public class ParchmentController : MonoBehaviour
             Debug.LogWarning("Trying to open parchment when it's already open!");
             return;
         }
+
+        _canvasGroup.blocksRaycasts = true;
 
         isOpen = true;
 

@@ -15,6 +15,8 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] Image icon;
     [SerializeField] Image overlay;
 
+    [SerializeField] Image equippedIcon;
+
     [SerializeField] TMPro.TMP_Text goldCostLabel;
 
     RectTransform rectTransform;
@@ -38,7 +40,10 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         currentSlot = slot;
 
         equipmentData = data;
+        SetEquippedStatus();
+
         goldCostLabel.text = data.cost.ToString();
+
         SetIcon(data.GetFirstSprite());
     }
 
@@ -55,7 +60,6 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData data)
     {
-
         if (!dragging)
             overlay.enabled = false;
     }
@@ -77,12 +81,14 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         dragging = true;
         rectTransform.SetParent(dragZone);
+        equippedIcon.gameObject.SetActive(false);
     }
 
 
     void Drop()
     {
         dragging = false;
+
         RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, Vector2.zero);
 
         if (hit.collider != null)
@@ -109,16 +115,25 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         ResetDraggable();
     }
 
+    public void SetEquippedStatus()
+    {
+        equippedIcon.gameObject.SetActive(equipmentData.IsEquipped);
+    }
+
     public void ResetDraggable()
     {
         rectTransform.SetParent(currentSlot.rectTransform);
         rectTransform.anchoredPosition = Vector2.zero;
+
+        SetEquippedStatus();
     }
 
     public void SetSlot(InventorySlot slot)
     {
         rectTransform.SetParent(slot.rectTransform);
         rectTransform.anchoredPosition = Vector2.zero;
+
+        SetEquippedStatus();
 
         currentSlot.currentItem = null;
         slot.currentItem = this;

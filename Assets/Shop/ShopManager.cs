@@ -129,10 +129,33 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void UpdateEquippedStatuses()
+    {
+        // run through and update the equipped icon for the inventorys
+        foreach (var slot in playerInventorySlots)
+        {
+            if (slot.currentItem != null)
+            {
+                slot.currentItem.SetEquippedStatus();
+            }
+        }
+
+        // run through and update the equipped icon for the inventorys
+        foreach (var slot in shopInventorySlots)
+        {
+            if (slot.currentItem != null)
+            {
+                slot.currentItem.SetEquippedStatus();
+            }
+        }
+    }
+
     public void FadeIn()
     {
         canvasGroup.blocksRaycasts = true;
         canvasGroup.DOFade(1, fadeTime);
+
+        UpdateEquippedStatuses();
 
         // Don't pop here, we're already playing it from the parchment closing
         //SFXPlayer.PlayPopSound();

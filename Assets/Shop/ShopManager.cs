@@ -88,7 +88,7 @@ public class ShopManager : MonoBehaviour
             ConfirmationController.Open
             (
                 "No can do!",
-                $"You need {equipmentData.cost} gold but you only have {PlayerController.localPlayer.GetGold()} gold!",
+                $"You need {equipmentData.cost} gold but you have {PlayerController.localPlayer.GetGold()} gold!",
                 "Okay :(", null
             );
         }

@@ -45,11 +45,14 @@ public class ShopManager : MonoBehaviour
     void Buy(EquipmentScrob item)
     {
         PlayerController.localPlayer.AddGold(-item.cost);
+        item.IsOwned = true;
     }
 
     void Sell(EquipmentScrob item)
     {
         PlayerController.localPlayer.AddGold(item.cost);
+        item.IsOwned = false;
+
     }
 
     public void TryBuy(InventoryItem item, EquipmentScrob equipmentData, InventorySlot slotTo)

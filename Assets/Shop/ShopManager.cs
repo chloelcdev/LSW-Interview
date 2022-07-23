@@ -37,6 +37,7 @@ public class ShopManager : MonoBehaviour
             {
                 slot.shop = this;
                 slot.CreateItem(inventoryItemPrefab, item);
+                return;
             }
         }
     }

@@ -7,6 +7,8 @@ public class EquipmentScrob : ScriptableObject
 {
     public SpriteLibraryAsset library;
 
+    public EquipmentType type = EquipmentType.Torso;
+
     public int cost = 2;
     public string itemName = "Equipment Piece";
 
@@ -56,6 +58,13 @@ public struct EquipmentSelection
 
     [HideInInspector] public int spriteCategoryIndex;
     [HideInInspector] public int spriteLabelIndex;
+}
+
+public enum EquipmentType
+{
+    Head,
+    Torso,
+    Gloves
 }
 
 // equipment info is what we actually work with, it gives us sprites and stuff we can actually use, along with the equipment selection in case we need it

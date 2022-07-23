@@ -90,7 +90,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7050955151612983533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 509510053}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: On_X_Button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7050955151612983533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6dcca3b0d459a4ba173728b27e70ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}
   equipmentDirectory: {fileID: 11400000, guid: 60b5555b7520d2b4bae3653d6b09aa32, type: 2}
   inventoryItemPrefab: {fileID: 4275001267536532438, guid: e2767e45ed5fa6a428fd77dfe2bd861d, type: 3}
   playerInventorySlots:

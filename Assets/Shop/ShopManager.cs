@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ShopManager : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class ShopManager : MonoBehaviour
     public void Awake()
     {
         Populate();
+    }
+
+    public void On_X_Button()
+    {
+        Close();
     }
 
     public void Populate()

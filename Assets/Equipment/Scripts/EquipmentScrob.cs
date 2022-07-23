@@ -15,6 +15,8 @@ public class EquipmentScrob : ScriptableObject
     public bool IsDefault = false;
     public bool IsOwned = false;
 
+    public bool IsEquipped = false;
+
     public List<EquipmentSelection> equipmentSelections = new List<EquipmentSelection>();
 
     public Sprite GetFirstSprite()

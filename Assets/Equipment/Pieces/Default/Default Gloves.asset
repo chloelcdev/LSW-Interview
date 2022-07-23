@@ -18,6 +18,7 @@ MonoBehaviour:
   itemName: Equipment Piece
   IsDefault: 1
   IsOwned: 0
+  IsEquipped: 1
   equipmentSelections:
   - spriteCategory: RGlove
     spriteLabel: Tan

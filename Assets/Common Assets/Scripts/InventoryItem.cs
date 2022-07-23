@@ -16,8 +16,6 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] Image overlay;
     RectTransform rectTransform;
 
-    RectTransform previousParent = null;
-
     InventorySlot currentSlot = null;
 
     // this will keep the ui element visible over everything else while it's mid-drag
@@ -26,8 +24,6 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-
-        previousParent = rectTransform.parent.GetComponent<RectTransform>();
 
         overlay.enabled = false;
 
@@ -111,7 +107,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void ResetDraggable()
     {
-        rectTransform.SetParent(previousParent);
+        rectTransform.SetParent(currentSlot.rectTransform);
         rectTransform.anchoredPosition = Vector2.zero;
     }
 

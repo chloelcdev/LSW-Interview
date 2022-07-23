@@ -87,7 +87,7 @@ public class ShopManager : MonoBehaviour
 
             ConfirmationController.Open
             (
-                "Nope",
+                "No can do!",
                 $"You need {equipmentData.cost} gold but you only have {PlayerController.localPlayer.GetGold()} gold!",
                 "Okay :(", null
             );
@@ -96,18 +96,32 @@ public class ShopManager : MonoBehaviour
 
     public void TrySell(InventoryItem item, EquipmentScrob equipmentData, InventorySlot slotTo)
     {
-        ConfirmationController.Open
-        (
-            "Are you sure?",
-            $"You're about to sell {equipmentData.itemName} for {equipmentData.cost}!",
-            "Cancel", "Sell",
-            item.ResetDraggable,
-            () =>
-            {
-                item.SetSlot(slotTo);
-                Sell(equipmentData);
-            }
-        );
+        if (!equipmentData.IsEquipped)
+        {
+            ConfirmationController.Open
+            (
+                "Are you sure?",
+                $"You're about to sell {equipmentData.itemName} for {equipmentData.cost}!",
+                "Cancel", "Sell",
+                item.ResetDraggable,
+                () =>
+                {
+                    item.SetSlot(slotTo);
+                    Sell(equipmentData);
+                }
+            );
+        }
+        else
+        {
+            item.ResetDraggable();
+
+            ConfirmationController.Open
+            (
+                "No can do!",
+                $"You can't sell something you're currently wearing!",
+                "Okay :(", null
+            );
+        }
     }
 
     public void FadeIn()

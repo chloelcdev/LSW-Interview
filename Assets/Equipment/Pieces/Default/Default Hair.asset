@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Default Hair
   m_EditorClassIdentifier: 
   library: {fileID: 7108339969198208228, guid: 7b2f3634ca1d0854096bd186a8a380b9, type: 3}
+  type: 0
   cost: 2
   itemName: Equipment Piece
   IsDefault: 1

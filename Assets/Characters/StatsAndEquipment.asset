@@ -7,12 +7,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6545876725993342891180e1c8c48e0, type: 3}
-  m_Name: CharacterInventory
+  m_Name: StatsAndEquipment
   m_EditorClassIdentifier: 
-  gold: 0
-  equippedHead: {fileID: 11400000, guid: e8981b2e4e3fdfa4c8f13a8ea719613d, type: 2}
-  equippedTorso: {fileID: 11400000, guid: 735fb7977f516e842abaa2251fb10d71, type: 2}
-  equippedGloves: {fileID: 11400000, guid: 9b0b7052d88675e4c99bbd7ded477f69, type: 2}
+  gold: 6
+  defaultEquipment:
+  - {fileID: 11400000, guid: 735fb7977f516e842abaa2251fb10d71, type: 2}
+  - {fileID: 11400000, guid: 9b0b7052d88675e4c99bbd7ded477f69, type: 2}
+  - {fileID: 11400000, guid: e8981b2e4e3fdfa4c8f13a8ea719613d, type: 2}

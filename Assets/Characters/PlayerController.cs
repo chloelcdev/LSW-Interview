@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] SpriteRenderer headSprite;
 
-    [SerializeField] PlayerStatsAndEquipsScrob inventory;
+    [SerializeField] PlayerStatsAndEquipsScrob statsAndEquips;
 
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
     Animator _animator;
@@ -39,23 +39,38 @@ public class PlayerController : MonoBehaviour
 
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
+
+        statsAndEquips.OnCharacterSpawn();
     }
 
-    public void Equip(EquipmentScrob equipment)
+    public void Equip(EquipmentScrob newEquip)
     {
-        foreach (var equip in equipment.equipmentSelections)
+        // for each piece of this equipment
+        foreach (var equipPiece in newEquip.equipmentSelections)
         {
+            // go through the sprite resolvers and find one with the matching category
             foreach (var sr in equipmentSpriteResolvers)
             {
-                if (sr.GetCategory() == equip.spriteCategory)
+                if (sr.GetCategory() == equipPiece.spriteCategory)
                 {
-                    sr.SetCategoryAndLabel(equip.spriteCategory, equip.spriteLabel);
+                    // set the sprite resolver to use the sprite we want
+                    sr.SetCategoryAndLabel(equipPiece.spriteCategory, equipPiece.spriteLabel);
+
+                    // set the old equipment as not equipped
+                    statsAndEquips.equipment[newEquip.type].IsEquipped = false;
+                    // set the new equipment as equipped
+                    newEquip.IsEquipped = true;
+
+                    // swap out our equipment in the list
+                    statsAndEquips.equipment.Remove(newEquip.type);
+                    statsAndEquips.equipment.Add(newEquip.type, newEquip);
+
+                    UpdateInfo();
+
                     return;
                 }
             }
         }
-
-        UpdateInfo();
     }
 
     private void Start()
@@ -77,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
     public Sprite GetHeadSprite()
     {
-        return headSprite.sprite;
+        return statsAndEquips.equipment[EquipmentType.Head].GetFirstSprite();
     }
 
     void HandleInput()
@@ -154,13 +169,13 @@ public class PlayerController : MonoBehaviour
 
     public void AddGold(int _amount)
     {
-        inventory.gold += _amount;
+        statsAndEquips.gold += _amount;
         UpdateInfo();
     }
 
     public int GetGold()
     {
-        return inventory.gold;
+        return statsAndEquips.gold;
     }
 }
 

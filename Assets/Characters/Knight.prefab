@@ -878,7 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoBar: {fileID: 0}
   headSprite: {fileID: 7409361535958785300}
-  inventory: {fileID: 11400000, guid: 2e257ca706a6f7b4eba8abab97ab24c1, type: 2}
+  statsAndEquips: {fileID: 11400000, guid: 2e257ca706a6f7b4eba8abab97ab24c1, type: 2}
   _interactionNotifier: {fileID: 1379102815}
   dragLerp: 0.12
   speed: 1.4

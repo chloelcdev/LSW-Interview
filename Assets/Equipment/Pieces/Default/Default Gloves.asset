@@ -17,7 +17,7 @@ MonoBehaviour:
   cost: 2
   itemName: Equipment Piece
   IsDefault: 1
-  IsOwned: 0
+  IsOwned: 1
   IsEquipped: 1
   equipmentSelections:
   - spriteCategory: RGlove

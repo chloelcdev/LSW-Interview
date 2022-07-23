@@ -7,7 +7,17 @@ public class PlayerStatsAndEquipsScrob : ScriptableObject
 {
     public int gold = 0;
 
-    public List<EquipmentScrob> equipment;
+    public Dictionary<EquipmentType, EquipmentScrob> equipment = new Dictionary<EquipmentType, EquipmentScrob>();
 
-    // put a list of clothing items we own here later
+    public List<EquipmentScrob> defaultEquipment = new List<EquipmentScrob>();
+
+    public void OnCharacterSpawn()
+    {
+        equipment.Clear();
+
+        foreach (var item in defaultEquipment)
+        {
+            equipment.Add(item.type, item);
+        }
+    }
 }

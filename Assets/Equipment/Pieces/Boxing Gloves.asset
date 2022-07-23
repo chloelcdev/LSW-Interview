@@ -18,6 +18,7 @@ MonoBehaviour:
   itemName: Equipment Piece
   IsDefault: 0
   IsOwned: 0
+  IsEquipped: 0
   equipmentSelections:
   - spriteCategory: RGlove
     spriteLabel: Boxing

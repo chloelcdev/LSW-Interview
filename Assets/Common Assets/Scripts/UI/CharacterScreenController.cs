@@ -46,6 +46,7 @@ public class CharacterScreenController : MonoBehaviour
         isOpen = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.DOFade(1, fadeTime);
+        SFXPlayer.PlayPopSound();
     }
 
     public void Close()
@@ -53,6 +54,6 @@ public class CharacterScreenController : MonoBehaviour
         isOpen = false;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.DOFade(0, fadeTime);
-        SFXPlayer.PlayExitSound();
+        SFXPlayer.PlayPopSound();
     }
 }

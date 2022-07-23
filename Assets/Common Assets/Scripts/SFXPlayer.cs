@@ -9,7 +9,7 @@ public class SFXPlayer : MonoBehaviour
     [SerializeField] AudioClip purchaseClip;
     [SerializeField] AudioClip coinGetClip;
     [SerializeField] AudioClip failureClip;
-    [SerializeField] AudioClip exitClip;
+    [SerializeField] AudioClip popClip;
 
     [SerializeField] List<AudioSource> audioSources;
 
@@ -98,9 +98,9 @@ public class SFXPlayer : MonoBehaviour
     {
         _instance.PlaySound(_instance.coinGetClip);
     }
-    public static void PlayExitSound()
+    public static void PlayPopSound()
     {
-        _instance.PlaySound(_instance.exitClip);
+        _instance.PlaySound(_instance.popClip);
     }
     public static void PlayFailureSound()
     {

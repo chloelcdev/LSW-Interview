@@ -133,13 +133,16 @@ public class ShopManager : MonoBehaviour
     {
         canvasGroup.blocksRaycasts = true;
         canvasGroup.DOFade(1, fadeTime);
+
+        // Don't pop here, we're already playing it from the parchment closing
+        //SFXPlayer.PlayPopSound();
     }
 
     void Close()
     {
         canvasGroup.blocksRaycasts = false;
         canvasGroup.DOFade(0, fadeTime);
-        SFXPlayer.PlayExitSound();
+        SFXPlayer.PlayPopSound();
     }
 
 }

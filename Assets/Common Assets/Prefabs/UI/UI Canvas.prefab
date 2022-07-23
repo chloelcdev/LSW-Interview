@@ -2008,7 +2008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3820642567222899895, guid: 9c51916c8489a004d8d6587cc44c5d8b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 22.2
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3820642567222899895, guid: 9c51916c8489a004d8d6587cc44c5d8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

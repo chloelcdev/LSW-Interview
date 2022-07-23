@@ -37,7 +37,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         currentSlot = slot;
 
         equipmentData = data;
-        SetIcon(data.GetInfo()[0].sprite);
+        SetIcon(data.GetFirstSprite());
     }
 
     public void SetIcon(Sprite sprite)

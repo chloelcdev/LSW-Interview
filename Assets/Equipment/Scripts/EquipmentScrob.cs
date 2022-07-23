@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
@@ -9,13 +8,19 @@ public class EquipmentScrob : ScriptableObject
     public SpriteLibraryAsset library;
 
     public int cost = 2;
+    public string itemName = "Equipment Piece";
 
     public bool IsDefault = false;
     public bool IsOwned = false;
 
     public List<EquipmentSelection> equipmentSelections = new List<EquipmentSelection>();
 
-    public List<EquipmentInfo> GetInfo() 
+    public Sprite GetFirstSprite()
+    {
+        return library.GetSprite(equipmentSelections[0].spriteCategory, equipmentSelections[0].spriteLabel);
+    }
+
+    /*public List<EquipmentInfo> GetInfo() 
     {
         List<EquipmentInfo> infoList = new List<EquipmentInfo>();
 
@@ -24,12 +29,13 @@ public class EquipmentScrob : ScriptableObject
             EquipmentInfo info = new EquipmentInfo();
             info.sprite = library.GetSprite(equipmentSelection.spriteCategory, equipmentSelection.spriteLabel);
             info.cost = cost;
+            info.itemName = itemName;
 
             infoList.Add(info);
         }
 
         return infoList;
-    }
+    }*/
 }
 
 // equipment selection just holds the name and index of the info needed for Unity's SpriteResolver
@@ -53,10 +59,11 @@ public struct EquipmentSelection
 }
 
 // equipment info is what we actually work with, it gives us sprites and stuff we can actually use, along with the equipment selection in case we need it
-public class EquipmentInfo
+/*public class EquipmentInfo
 {
+    public string itemName;
     public Sprite sprite;
     public int cost;
 
     [HideInInspector] public EquipmentSelection equipmentSelection;
-}
+}*/

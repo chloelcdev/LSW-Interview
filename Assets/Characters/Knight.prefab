@@ -884,6 +884,13 @@ MonoBehaviour:
   speed: 1.4
   graphicToFlip: {fileID: 7469888483895780867}
   xFlipTweenTime: 0.25
+  equipmentSpriteResolvers:
+  - {fileID: 828754171543992769}
+  - {fileID: 4023115043221895230}
+  - {fileID: 635025046165418368}
+  - {fileID: 3215602730706830471}
+  - {fileID: 1056486515349172935}
+  - {fileID: 5584963245570640368}
 --- !u!1 &5315289186164266775
 GameObject:
   m_ObjectHideFlags: 0

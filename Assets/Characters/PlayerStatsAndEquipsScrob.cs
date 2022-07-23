@@ -7,9 +7,7 @@ public class PlayerStatsAndEquipsScrob : ScriptableObject
 {
     public int gold = 0;
 
-    public EquipmentScrob equippedHead;
-    public EquipmentScrob equippedTorso;
-    public EquipmentScrob equippedGloves;
+    public List<EquipmentScrob> equipment;
 
     // put a list of clothing items we own here later
 }

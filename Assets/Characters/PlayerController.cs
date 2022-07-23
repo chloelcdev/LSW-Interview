@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.U2D.Animation;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,12 +31,31 @@ public class PlayerController : MonoBehaviour
     // how long we spend tweening the x scale when we flip direction
     [SerializeField] float xFlipTweenTime = 0.3f;
 
+    [SerializeField] List<SpriteResolver> equipmentSpriteResolvers;
+
     void Awake()
     {
         localPlayer = this;
 
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    public void Equip(EquipmentScrob equipment)
+    {
+        foreach (var equip in equipment.equipmentSelections)
+        {
+            foreach (var sr in equipmentSpriteResolvers)
+            {
+                if (sr.GetCategory() == equip.spriteCategory)
+                {
+                    sr.SetCategoryAndLabel(equip.spriteCategory, equip.spriteLabel);
+                    return;
+                }
+            }
+        }
+
+        UpdateInfo();
     }
 
     private void Start()

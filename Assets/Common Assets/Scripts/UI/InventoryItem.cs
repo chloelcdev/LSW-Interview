@@ -55,7 +55,8 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData data)
     {
-        overlay.enabled = true;
+        if (!equipmentData.IsEquipped)
+            overlay.enabled = true;
     }
 
     public void OnPointerExit(PointerEventData data)
@@ -66,7 +67,19 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerDown(PointerEventData data)
     {
-        StartDrag();
+        if (!equipmentData.IsEquipped)
+            StartDrag();
+        else
+        {
+            ConfirmationController.Open
+            (
+                "No can do!",
+                $"You can't sell something you're currently wearing!",
+                "Okay", null
+            );
+
+            SFXPlayer.PlayFailureSound();
+        }
     }
 
     public void OnPointerUp(PointerEventData data)

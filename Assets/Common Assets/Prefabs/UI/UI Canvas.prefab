@@ -343,6 +343,13 @@ MonoBehaviour:
   UIElements:
   - name: dragzone
     rectTranform: {fileID: 5491823637277580934}
+    blocksInput: 0
+  - name: looksmith
+    rectTranform: {fileID: 5694556640747096380}
+    blocksInput: 1
+  - name: parchment
+    rectTranform: {fileID: 5694556640324715763}
+    blocksInput: 1
 --- !u!1 &5982021320597911504
 GameObject:
   m_ObjectHideFlags: 0

@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
-        if (ParchmentController.isOpen)
+        if (UILocator.UIIsOpen())
         {
             SetAnimationState(PlayerAnimState.Idle);
             return;

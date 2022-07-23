@@ -6,9 +6,9 @@ public class UILocator : MonoBehaviour
 {
     public static UILocator _instance;
 
-    public List<RectTransformStringPair> UIElements;
+    public List<UIPieceInfo> UIElements;
 
-    public Dictionary<string, RectTransform> UIDictionary = new Dictionary<string, RectTransform>();
+    public Dictionary<string, UIPieceInfo> UIDictionary = new Dictionary<string, UIPieceInfo>();
 
     private void Awake()
     {
@@ -21,25 +21,40 @@ public class UILocator : MonoBehaviour
     {
         UIDictionary.Clear();
 
-        foreach (var pair in UIElements)
+        foreach (var UIPiece in UIElements)
         {
-            UIDictionary.Add(pair.name, pair.rectTranform);
+            UIDictionary.Add(UIPiece.name, UIPiece);
         }
+    }
+
+    public static bool UIIsOpen()
+    {
+        foreach (var UIPiece in _instance.UIDictionary.Values)
+        {
+            if (!UIPiece.blocksInput) continue;
+
+            var canvasGroup = UIPiece.rectTranform.GetComponent<CanvasGroup>();
+            if (canvasGroup != null && canvasGroup.alpha > 0)
+                return true;
+        }
+
+        return false;
     }
 
     public static RectTransform LocateUI(string name)
     {
         if (_instance.UIDictionary.ContainsKey(name))
-            return _instance.UIDictionary[name];
+            return _instance.UIDictionary[name].rectTranform;
         else
             return null;
     }
 }
 
 [System.Serializable]
-public struct RectTransformStringPair
+public struct UIPieceInfo
 {
     public string name;
     public RectTransform rectTranform;
+    public bool blocksInput;
 }
 

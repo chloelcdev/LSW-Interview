@@ -69,6 +69,8 @@ public class EquipmentSelector : MonoBehaviour
             selectionIndex = 0;
 
         Format(playerEquipment[selectionIndex]);
+
+        SFXPlayer.PlayClickSound();
     }
     public void On_Previous_Clicked()
     {
@@ -79,6 +81,8 @@ public class EquipmentSelector : MonoBehaviour
             selectionIndex = playerEquipment.Count - 1;
 
         Format(playerEquipment[selectionIndex]);
+
+        SFXPlayer.PlayClickSound();
     }
 
     public void On_Equip_Clicked()

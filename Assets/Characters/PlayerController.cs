@@ -71,6 +71,8 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        SFXPlayer.PlayEquipSound();
     }
 
     private void Start()

@@ -17,10 +17,27 @@ public class DeepButonHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     [SerializeField] Color LabelColor = Color.white;
     [SerializeField] float LabelFontSize = 28;
 
+    bool pointerIsDown = false;
+
     private void Awake()
     {
         button = GetComponent<Button>();
         UpdateDeepButtonLabels();
+        UpdateGraphicState();
+    }
+
+    void UpdateGraphicState()
+    {
+        if (!button.interactable)
+            nonPressedGraphic.gameObject.SetActive(false);
+        else
+            nonPressedGraphic.gameObject.SetActive(!pointerIsDown);
+    }
+
+    public void SetInteractable(bool interactable)
+    {
+        button.interactable = interactable;
+        UpdateGraphicState();
     }
 
     private void OnValidate()
@@ -48,11 +65,13 @@ public class DeepButonHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        nonPressedGraphic.enabled = false;
+        pointerIsDown = true;
+        UpdateGraphicState();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        nonPressedGraphic.enabled = true;
+        pointerIsDown = false;
+        UpdateGraphicState();
     }
 }

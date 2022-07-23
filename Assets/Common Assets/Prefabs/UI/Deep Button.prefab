@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0a77214f825f646b39493aa7603a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 5127493912790091807}
   nonPressedGraphic: {fileID: 5127493914318847911}
   nonPressedLabel: {fileID: 7928923897792093210}
   pressedLabel: {fileID: 1054963056942030660}

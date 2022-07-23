@@ -13,17 +13,20 @@ MonoBehaviour:
   m_Name: Default Armor
   m_EditorClassIdentifier: 
   library: {fileID: 7108339969198208228, guid: 7b2f3634ca1d0854096bd186a8a380b9, type: 3}
+  cost: 2
+  itemName: Equipment Piece
   IsDefault: 1
+  IsOwned: 0
   equipmentSelections:
-  - spriteCategory: LShoulder
+  - spriteCategory: Body
     spriteLabel: Armor
-    spriteCategoryIndex: 3
+    spriteCategoryIndex: 1
     spriteLabelIndex: 0
   - spriteCategory: RShoulder
     spriteLabel: Armor
     spriteCategoryIndex: 2
     spriteLabelIndex: 0
-  - spriteCategory: Body
+  - spriteCategory: LShoulder
     spriteLabel: Armor
-    spriteCategoryIndex: 1
+    spriteCategoryIndex: 3
     spriteLabelIndex: 0

@@ -13,17 +13,20 @@ MonoBehaviour:
   m_Name: Armorless
   m_EditorClassIdentifier: 
   library: {fileID: 7108339969198208228, guid: 7b2f3634ca1d0854096bd186a8a380b9, type: 3}
+  cost: 2
+  itemName: Equipment Piece
   IsDefault: 0
+  IsOwned: 0
   equipmentSelections:
-  - spriteCategory: LShoulder
+  - spriteCategory: Body
     spriteLabel: Cloth
-    spriteCategoryIndex: 3
+    spriteCategoryIndex: 1
     spriteLabelIndex: 1
   - spriteCategory: RShoulder
     spriteLabel: Cloth
     spriteCategoryIndex: 2
     spriteLabelIndex: 1
-  - spriteCategory: Body
+  - spriteCategory: LShoulder
     spriteLabel: Cloth
-    spriteCategoryIndex: 1
+    spriteCategoryIndex: 3
     spriteLabelIndex: 1

@@ -71,7 +71,7 @@ public class ShopManager : MonoBehaviour
             ConfirmationController.Open
             (
                 "Are you sure?",
-                $"You're about to buy {equipmentData.itemName} for {equipmentData.cost}!",
+                $"You're about to buy {equipmentData.itemName} for {equipmentData.cost} gold!",
                 "Cancel", "Buy",
                 item.ResetDraggable,
                 () =>
@@ -101,7 +101,7 @@ public class ShopManager : MonoBehaviour
             ConfirmationController.Open
             (
                 "Are you sure?",
-                $"You're about to sell {equipmentData.itemName} for {equipmentData.cost}!",
+                $"You're about to sell {equipmentData.itemName} for {equipmentData.cost} gold!",
                 "Cancel", "Sell",
                 item.ResetDraggable,
                 () =>

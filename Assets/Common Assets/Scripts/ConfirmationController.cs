@@ -10,6 +10,7 @@ public class ConfirmationController : MonoBehaviour
     static ConfirmationController _instance;
 
     [SerializeField] CanvasGroup canvasGroup;
+    float fadeTime = 0.3f;
 
     [SerializeField] TMP_Text Title;
     [SerializeField] TMP_Text Message;
@@ -18,8 +19,6 @@ public class ConfirmationController : MonoBehaviour
     [SerializeField] DeepButonHandler RightButton;
 
     [SerializeField] DeepButonHandler SingleButton;
-
-    float fadeTime = 0.3f;
 
     private void Awake()
     {

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] SpriteRenderer headSprite;
 
-    [SerializeField] PlayerStatsAndEquipsScrob statsAndEquips;
+    public PlayerStatsAndEquipsScrob statsAndEquips;
 
     PlayerAnimState _currentAnimationState = PlayerAnimState.Idle;
     Animator _animator;

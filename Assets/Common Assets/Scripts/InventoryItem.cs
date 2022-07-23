@@ -79,6 +79,11 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     void Drop()
     {
+        StartCoroutine(DropRoutine());
+    }
+
+    IEnumerator DropRoutine()
+    {
         dragging = false;
 
         RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
@@ -94,12 +99,14 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 currentSlot.currentItem = null;
                 slot.currentItem = this;
 
-                return;
+                yield break; 
             }
         }
 
         rectTransform.SetParent(previousParent);
         rectTransform.anchoredPosition = Vector2.zero;
+
+        yield break;
     }
 
     void Update()

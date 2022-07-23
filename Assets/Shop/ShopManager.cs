@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    [SerializeField] PlayerInventoryScrob playerInventoryScrob;
-
     [SerializeField] EquipmentDirectory equipmentDirectory;
 
     [SerializeField] InventoryItem inventoryItemPrefab;

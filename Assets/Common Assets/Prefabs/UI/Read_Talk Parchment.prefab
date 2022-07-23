@@ -369,7 +369,7 @@ MonoBehaviour:
   _title: {fileID: 1828882399453684631}
   _message: {fileID: 1828882398992086415}
   _button: {fileID: 333740994039636733}
-  characterTypeDelayMinMax: {x: 0.01, y: 0.08}
+  characterTypeDelayMinMax: {x: 0.004, y: 0.04}
 --- !u!225 &1828882399585253860
 CanvasGroup:
   m_ObjectHideFlags: 0

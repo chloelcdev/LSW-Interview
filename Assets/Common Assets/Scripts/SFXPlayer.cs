@@ -10,6 +10,7 @@ public class SFXPlayer : MonoBehaviour
     [SerializeField] AudioClip coinGetClip;
     [SerializeField] AudioClip failureClip;
     [SerializeField] AudioClip popClip;
+    [SerializeField] AudioClip stoneSlideClip;
 
     [SerializeField] List<AudioSource> audioSources;
 
@@ -105,5 +106,9 @@ public class SFXPlayer : MonoBehaviour
     public static void PlayFailureSound()
     {
         _instance.PlaySound(_instance.failureClip);
+    }
+    public static void PlayStoneSlideSound()
+    {
+        _instance.PlaySound(_instance.stoneSlideClip);
     }
 }

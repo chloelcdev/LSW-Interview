@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 0
   equippedHead: {fileID: 11400000, guid: e8981b2e4e3fdfa4c8f13a8ea719613d, type: 2}
-  equippedBody: {fileID: 11400000, guid: 735fb7977f516e842abaa2251fb10d71, type: 2}
+  equippedTorso: {fileID: 11400000, guid: 735fb7977f516e842abaa2251fb10d71, type: 2}
   equippedGloves: {fileID: 11400000, guid: 9b0b7052d88675e4c99bbd7ded477f69, type: 2}

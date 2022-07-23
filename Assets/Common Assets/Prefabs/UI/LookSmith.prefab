@@ -1835,9 +1835,29 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.001083374
       objectReference: {fileID: 0}
+    - target: {fileID: 445142048403630961, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631016728244252903, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2431158183516098108, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
       propertyPath: m_Name
       value: Shop Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588104979784529876, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967494023329863644, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393914706769382736, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3671347621745200411, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
       propertyPath: m_Pivot.x
@@ -1923,6 +1943,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3803889286794690676, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505823749367202692, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702531811121088333, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717125491427003212, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7496527604775895231, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
       propertyPath: m_text
       value: Shop
@@ -1930,6 +1966,18 @@ PrefabInstance:
     - target: {fileID: 7496527604775895231, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662514745621071297, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701657193966853037, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029326032444883383, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}
+      propertyPath: isShopInventorySlot
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525c46542e2ecf14d9f94f7616a62604, type: 3}

@@ -79,10 +79,8 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         rectTransform.SetParent(dragZone);
     }
 
-        StartCoroutine(DropRoutine());
-    }
 
-    IEnumerator DropRoutine()
+    void Drop()
     {
         dragging = false;
 

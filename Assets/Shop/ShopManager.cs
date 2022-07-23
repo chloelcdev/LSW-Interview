@@ -11,6 +11,11 @@ public class ShopManager : MonoBehaviour
     [SerializeField] List<InventorySlot> playerInventorySlots = new List<InventorySlot>();
     [SerializeField] List<InventorySlot> shopInventorySlots = new List<InventorySlot>();
 
+    public void Awake()
+    {
+        Populate();
+    }
+
     public void Populate()
     {
         foreach(var item in equipmentDirectory.GetPlayerEquipment())

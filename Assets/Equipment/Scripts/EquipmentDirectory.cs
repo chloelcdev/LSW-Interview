@@ -2,20 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu()]
 public class EquipmentDirectory : ScriptableObject
 {
-    List<EquipmentScrob> AllEquipment = new List<EquipmentScrob>();
+    public List<EquipmentScrob> AllEquipment = new List<EquipmentScrob>();
 
-    void GetShopEquipment()
+    public List<EquipmentScrob> GetShopEquipment()
     {
-        List<EquipmentScrob> allShopEquipment = new List<EquipmentScrob>();
+        List<EquipmentScrob> equipment = new List<EquipmentScrob>();
 
         foreach (var item in AllEquipment)
         {
-            if (!item.IsDefault)
+            if (!item.IsDefault && !item.IsOwned)
             {
-                allShopEquipment.Add(item);
+                equipment.Add(item);
             }
         }
+
+        return equipment;
+    }
+
+    public List<EquipmentScrob> GetPlayerEquipment()
+    {
+        List<EquipmentScrob> equipment = new List<EquipmentScrob>();
+
+        foreach (var item in AllEquipment)
+        {
+            if (item.IsDefault || item.IsOwned)
+            {
+                equipment.Add(item);
+            }
+        }
+
+        return equipment;
     }
 }

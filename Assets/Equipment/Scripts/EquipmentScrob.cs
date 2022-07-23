@@ -7,7 +7,9 @@ using UnityEngine.U2D.Animation;
 public class EquipmentScrob : ScriptableObject
 {
     public SpriteLibraryAsset library;
+
     public bool IsDefault = false;
+    public bool IsOwned = false;
 
     public List<EquipmentSelection> equipmentSelections = new List<EquipmentSelection>();
     

@@ -17,7 +17,12 @@ public class GameExitController : MonoBehaviour
             "Exit Game?",
             "Are you done playing?",
             "Exit", "Cancel",
-            () => Application.Quit(),
+            () => {
+                Application.Quit();
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            },
             null
         );
     }

@@ -6,6 +6,8 @@ public class InventorySlot : MonoBehaviour
 {
     [HideInInspector] public RectTransform rectTransform;
 
+    [HideInInspector] public ShopManager shop;
+
     public InventoryItem currentItem = null;
 
     public bool isShopInventorySlot = false;
@@ -19,6 +21,8 @@ public class InventorySlot : MonoBehaviour
     {
         var spawnedItem = Instantiate(itemPrefab, transform);
         spawnedItem.Setup(item, this);
+
+        spawnedItem.shop = shop;
 
         SetItem(spawnedItem);
     }

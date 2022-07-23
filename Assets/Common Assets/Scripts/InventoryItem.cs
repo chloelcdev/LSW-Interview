@@ -8,6 +8,8 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     bool dragging = false;
     float distance;
 
+    [HideInInspector] public ShopManager shop;
+
     [SerializeField] EquipmentScrob equipmentData;
 
     [SerializeField] Image icon;

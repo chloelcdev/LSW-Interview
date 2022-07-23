@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+    [SerializeField] CanvasGroup canvasGroup;
+    float fadeTime = 0.3f;
+
     [SerializeField] EquipmentDirectory equipmentDirectory;
 
     [SerializeField] InventoryItem inventoryItemPrefab;
@@ -99,6 +102,18 @@ public class ShopManager : MonoBehaviour
                 Sell(equipmentData);
             }
         );
+    }
+
+    void FadeIn()
+    {
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.DOFade(1, fadeTime);
+    }
+
+    void Close()
+    {
+        canvasGroup.blocksRaycasts = false;
+        canvasGroup.DOFade(0, fadeTime);
     }
 
 }

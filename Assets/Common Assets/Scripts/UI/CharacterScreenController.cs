@@ -53,5 +53,6 @@ public class CharacterScreenController : MonoBehaviour
         isOpen = false;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.DOFade(0, fadeTime);
+        SFXPlayer.PlayExitSound();
     }
 }

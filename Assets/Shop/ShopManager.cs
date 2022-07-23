@@ -92,6 +92,8 @@ public class ShopManager : MonoBehaviour
                 $"You need {equipmentData.cost} gold but you have {PlayerController.localPlayer.GetGold()} gold!",
                 "Okay :(", null
             );
+
+            SFXPlayer.PlayFailureSound();
         }
     }
 
@@ -122,6 +124,8 @@ public class ShopManager : MonoBehaviour
                 $"You can't sell something you're currently wearing!",
                 "Okay :(", null
             );
+
+            SFXPlayer.PlayFailureSound();
         }
     }
 
@@ -135,6 +139,7 @@ public class ShopManager : MonoBehaviour
     {
         canvasGroup.blocksRaycasts = false;
         canvasGroup.DOFade(0, fadeTime);
+        SFXPlayer.PlayExitSound();
     }
 
 }

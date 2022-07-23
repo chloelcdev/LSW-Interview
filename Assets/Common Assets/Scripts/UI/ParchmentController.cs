@@ -40,6 +40,7 @@ public class ParchmentController : MonoBehaviour
         _canvasGroup.blocksRaycasts = false;
         _canvasGroup.DOKill();
         _canvasGroup.DOFade(0, fadeTime);
+        SFXPlayer.PlayExitSound();
     }
 
     public static void OpenParchment(string title, string message, System.Action onContinue = null)

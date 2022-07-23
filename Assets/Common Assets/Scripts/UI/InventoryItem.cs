@@ -111,7 +111,11 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             var slot = hit.collider.GetComponent<InventorySlot>();
             if (slot != null && slot.currentItem == null)
             {
-                if (currentSlot.isShopInventorySlot == slot.isShopInventorySlot)
+                if (currentSlot.isShopInventorySlot && slot.isShopInventorySlot)
+                {
+                    ResetDraggable();
+                }
+                else if (currentSlot.isShopInventorySlot == slot.isShopInventorySlot)
                 {
                     SetSlot(slot);
                 }

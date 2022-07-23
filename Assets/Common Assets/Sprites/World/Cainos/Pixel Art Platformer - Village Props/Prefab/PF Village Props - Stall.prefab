@@ -740,8 +740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: ShopKeeper
-  message: I'm the LookSmith. I'm quite proud of my name! You wont find prices anywhere
-    else. That's not a typo. I said what I said.
+  message: I'm Hatman, the LookSmith. I'm quite proud of my brand name! You wont
+    find prices anywhere else! That's not a typo I said what I said.
   onMessageClose:
     m_PersistentCalls:
       m_Calls:

@@ -1499,19 +1499,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -587020401536548690, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.15358746
+      value: -0.15117252
       objectReference: {fileID: 0}
     - target: {fileID: -587020401536548690, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.7690972
+      value: 0.46203202
       objectReference: {fileID: 0}
     - target: {fileID: -587020401536548690, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.0764148
+      value: 1.0831698
       objectReference: {fileID: 0}
     - target: {fileID: -587020401536548690, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.3579348
+      value: 1.055
       objectReference: {fileID: 0}
     - target: {fileID: -587020401536548690, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_BoneTransforms.Array.size
@@ -1660,7 +1660,7 @@ PrefabInstance:
     - target: {fileID: 1609719090194301641, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7047971905120868581, guid: 28788130087573e428c1064bd9c69548, type: 3}
+      objectReference: {fileID: -2756081072618206453, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
     - target: {fileID: 1609719090194301641, guid: d6484fd6f65d1c64aba28b3333bc022b, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -2280,7 +2280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CategoryHash: 0
   m_labelHash: 0
-  m_SpriteKey: 4.340858e-20
+  m_SpriteKey: -2.718101e-11
 --- !u!114 &8446553761697404700
 MonoBehaviour:
   m_ObjectHideFlags: 0

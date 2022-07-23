@@ -81,6 +81,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleInput();
+    }
+
+    private void FixedUpdate()
+    {
         ApplyDrag();
         ApplyVelocity();
     }

@@ -8,11 +8,15 @@ class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     bool dragging = false;
     float distance;
 
+    [SerializeField] EquipmentScrob equipmentData;
+
     [SerializeField] Image icon;
     [SerializeField] Image overlay;
     RectTransform rectTransform;
 
     RectTransform previousParent = null;
+
+    InventorySlot currentSlot = null;
 
     // this will keep the ui element visible over everything else while it's mid-drag
     RectTransform dragZone;
@@ -26,6 +30,14 @@ class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         overlay.enabled = false;
 
         dragZone = UILocator.LocateUI("dragzone");
+    }
+
+    public void Setup(EquipmentScrob data, InventorySlot slot)
+    {
+        currentSlot = slot;
+
+        equipmentData = data;
+        SetIcon(data.GetInfo()[0].sprite);
     }
 
     public void SetIcon(Sprite sprite)
@@ -74,10 +86,14 @@ class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         if (hit.collider != null)
         {
             var slot = hit.collider.GetComponent<InventorySlot>();
-            if (slot != null)
+            if (slot != null && slot.currentItem == null)
             {
                 rectTransform.anchoredPosition = slot.rectTransform.anchoredPosition;
                 rectTransform.SetParent(slot.rectTransform);
+
+                currentSlot.currentItem = null;
+                slot.currentItem = this;
+
                 return;
             }
         }

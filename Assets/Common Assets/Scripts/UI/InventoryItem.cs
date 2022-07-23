@@ -85,9 +85,11 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerUp(PointerEventData data)
     {
         if (dragging)
+        {
             overlay.enabled = false;
 
-        Drop();
+            Drop();
+        }
     }
 
     void StartDrag()

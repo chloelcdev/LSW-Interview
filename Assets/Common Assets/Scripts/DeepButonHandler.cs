@@ -8,7 +8,7 @@ using TMPro;
 [RequireComponent(typeof(Button))]
 public class DeepButonHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    Button button;
+    public Button button;
     [SerializeField] Image nonPressedGraphic;
     [SerializeField] TMP_Text nonPressedLabel;
     [SerializeField] TMP_Text pressedLabel;

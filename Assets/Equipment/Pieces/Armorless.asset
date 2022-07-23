@@ -15,7 +15,7 @@ MonoBehaviour:
   library: {fileID: 7108339969198208228, guid: 7b2f3634ca1d0854096bd186a8a380b9, type: 3}
   type: 1
   cost: 2
-  itemName: Equipment Piece
+  itemName: Light Armor
   IsDefault: 0
   IsOwned: 0
   IsEquipped: 0

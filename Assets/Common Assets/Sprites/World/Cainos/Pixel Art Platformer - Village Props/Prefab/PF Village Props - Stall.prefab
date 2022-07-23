@@ -626,6 +626,8 @@ GameObject:
   - component: {fileID: 8880890979157700243}
   - component: {fileID: 851783243383428970}
   - component: {fileID: 5781246649237177052}
+  - component: {fileID: 6826881668252092058}
+  - component: {fileID: 7130113663066756557}
   m_Layer: 0
   m_Name: PF Village Props - Stall
   m_TagString: Untagged
@@ -697,6 +699,64 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6826881668252092058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880890979157700241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79a9373ba44db6429b896be48d3710c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7130113663066756557}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  message: Interact
+--- !u!114 &7130113663066756557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880890979157700241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d066c00a2c3a97438432994b05e7b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: ShopKeeper
+  message: I'm the LookSmith. I'm quite proud of my name! You wont find prices anywhere
+    else. That's not a typo. I said what I said.
+  onMessageClose:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8880890979189036120
 GameObject:
   m_ObjectHideFlags: 0

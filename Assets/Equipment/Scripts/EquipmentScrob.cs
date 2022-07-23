@@ -8,6 +8,8 @@ public class EquipmentScrob : ScriptableObject
 {
     public SpriteLibraryAsset library;
 
+    public int cost = 2;
+
     public bool IsDefault = false;
     public bool IsOwned = false;
 
